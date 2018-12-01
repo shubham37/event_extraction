@@ -7,28 +7,14 @@ import os
 import sys
 import nltk
 
-# def load_api():
-#     ''' Function that loads the twitter API after authorizing the user. '''
-#
-#     consumer_key = "1AuAlJYU92dRhQbs4bLV1OkmB"
-#     consumer_secret = "ZTx4b3Wja2jxCAxNUz3F6UuIRE6fOwy0nfiVKJey3AE2yXQiZw"
-#
-#     access_token = "1036668553435537409-yWNdCXPEabt1CRUldWc93LwFOCGyyH"
-#     access_token_secret = "blPTtk6ZFTVu9tGSd7ESwSnEuNXPzElPX0PxDyjkqGQnc"
-#
-#     auth = OAuthHandler(consumer_key, consumer_secret)
-#     auth.set_access_token(access_token, access_token_secret)
-#     # load the twitter API via tweepy
-#     return tweepy.API(auth)
-
 class TwitterClient(object):
 
     def __init__(self):
-        consumer_key = "1AuAlJYU92dRhQbs4bLV1OkmB"
-        consumer_secret = "ZTx4b3Wja2jxCAxNUz3F6UuIRE6fOwy0nfiVKJey3AE2yXQiZw"
+        consumer_key = "XXXXXXXXXXXXXXXXXXXXX"
+        consumer_secret = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-        access_token = "1036668553435537409-yWNdCXPEabt1CRUldWc93LwFOCGyyH"
-        access_token_secret = "blPTtk6ZFTVu9tGSd7ESwSnEuNXPzElPX0PxDyjkqGQnc"
+        access_token = "XXXXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXX"
+        access_token_secret = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
         try:
             # create OAuthHandler object
@@ -67,11 +53,6 @@ class TwitterClient(object):
         return searched_tweets, max_id
 
     def get_tweet_id(self, date='', days_ago=9, query='a'):
-        ''' Function that gets the ID of a tweet. This ID can then be
-            used as a 'starting point' from which to search. The query is
-            required and has been set to a commonly used word by default.
-            The variable 'days_ago' has been initialized to the maximum
-            amount we are able to search back in time (9).'''
 
         if date:
             # return an ID from the start of the given day
