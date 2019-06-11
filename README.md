@@ -1,4 +1,4 @@
-# unfound_nlp_assignment
+# Event_Extraction
 There are 3 python files for each problem statement.
 
 # Dependencies Used
